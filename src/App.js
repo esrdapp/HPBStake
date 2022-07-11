@@ -169,7 +169,13 @@ class App extends React.Component {
     if (!this.state.account) {
       return (
         <div>
-        <h1>Please connect your Metamask wallet to HPB first.</h1>
+        <h1>Welcome to HPB Stake. Please connect your Metamask wallet to HPB chain first.</h1>
+		<h2>Network Name: HPB</h2>
+		<h2>New RPC URL: 'https://hpbnode.com' </h2>
+		<h2>Chain ID: 269 </h2>
+		<h2>Currency Symbol: HPB</h2>
+		<h2>Block Explorer: 'https://hscan.org' </h2>
+		<br />
         <img src={logo} className="App-logo" alt="logo" />
         </div>
       )
@@ -177,79 +183,64 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <img src={logo} className="App-logo" alt="HPB Stake" />
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          The world's first gamified staking DApp! Earn HPB by depositing HPB into the immutable, decentralised HPB Stake smart contract!</p>
-          You can obtain HPB from Gate.io CEX or swap to HPB using allchainbridge.com
+          Earn 87.6% interest per year, staking with the DON!</p>
+          DON Token Address
           <br />
+          <a rel="noreferrer" target="_blank" href="https://hpbscan.org/HRC20/0xef8432fD5D8b6B33a9915cD6Ad22fe9B6718Db9B">0xef8432fD5D8b6B33a9915cD6Ad22fe9B6718Db9B</a>
 
+        <p className='mt-20'>Number of DON tokens in your wallet: {this.state.balance} DON</p>
+        <p>Number of DON tokens you have staked: {this.state.stakedBalance} DON</p>
 
-        <p className='mt-20'>Number of HPB tokens in your connected wallet: {this.state.balance} HPB</p>
-        <p>Number of HPB you have staked: {this.state.stakedBalance} HPB</p>
-
+        <p className='mt-20'>Call the DON!</p>
+        <img src={call} className="" alt="call" width={280} />
+        <p className="desc">Warning: this function means Double Or Nothing!
+        <br />  The function will call a random number from the HPB HRNG. 
+        <br />  You will either double the DON tokens in your wallet, or you will lose all of them! 
+        <br /> Only a true DON will be brave enough to call this function!</p>
+        <button onClick={this.handleCall} className="call-btn">Call the don</button>
         <br />
-        <p className='mt-20'>HPB Staking</p>
-        <p><b>HPB Stake</b> is the first staking platform in the world to introduce an element of gamification and randomness to staking!</p>
-        
-        <p>When you stake your HPB, it will generate two values from 0-100. The first is your 'Deposit Percentage' (DP) value, and the second is 
-        your 'Stake Multiplier' (SM) value.</p>
-
-        <p>The Deposit Percentage determines what percentage of your stake HPB will accrue interest (0-100%)</p>
-        <p>The Stake Multiplier determines what Annual Percentage Yield (APY) will be earned on this over a 1 year period</p>
-
-        <p>For example, if you stake 100 HPB, and your DP is 83 and your SM is 22, then you would earn the following over 1 year:</p>
-        <br />
-        <p>83 HPB will earn interest, and of that 83 HPB, it will earn interes of 22% APY, which is 83 x 1.22 = 101.26 HPB</p>
-        <p>Therefore after 1 year, you can with draw 101.26 + 17 HPB = 118.26 HPB</p>
-                                                                                                      
+        <p className='mt-20'>DON Token Staking</p>
+        <p>Earn 0.01% interest for every hour staked (0.24% interest per day | 1.68% interest per week | 87.6% per year)</p>
                
 
         <form onSubmit={this.handleStake} className='mt-20'>
-          <label>Number of HPB you wish to stake: </label><br />
+          <label>Number of DON Tokens you wish to stake: </label><br />
           <div>
-            <label className='ml-20'>Amount: </label>
+            <label className="ml-20">Amount: </label>
             <input
-              type='number'
+              type="number"
               min={0}
               value={this.state.stakeValue}
               onChange={event => this.setState({ stakeValue: event.target.value })}
             />
-            <button className='ml-20'>Stake</button>
+            <button className="ml-20">Stake</button>
           </div>
         </form>
 
         <br />
-        <p>You can withdraw whenever you like, but withdrawals in less than 180 days will incur a penalty forfeit! 
-        <p>less than 30 days = 25% forfeit of total stake</p>
-        <p>30-60 days = 20% forfeit of total stake</p>
-        <p>60-90 days = 15% forfeit of total stake</p>
-        <p>90-120 days = 10% forfeit of total stake</p>
-        <p>120-150 days = 5% forfeit of total stake</p>
-        <p>150-180 days = 2.5% forfeit of total stake</p>
-        <p>After 180 days = No forfeit, and interest begins to accrue</p>
-
-        <br />
-        <p>This is necessary to avoid people withdrawing their entire stake if they receive a DP and SM value that is less favourable to them. 
-        It will also help fund the smart contract for other users as adoption increases</p>
+        <p>You can withdraw whenever you like, but withdrawals from each subsequent stake index incur a 1% incremental withdrawl fee. 
+        You can only ever deposit once per stake index, however you can withdraw from each stake index in full or in part</p>
 
         <form onSubmit={this.handleWithdraw} className='mt-20'>
-          <label>Withdraw your Staked HPB </label><br />
+          <label>Number of DON Tokens you wish to withdraw (excluding stake interest which will be added automatically): </label><br />
           <div>
-            <label className='ml-20'>Stake Index: </label>
+            <label className="ml-20">Stake Index: </label>
             <input
-              type='number'
+              type="number"
               min={0}
               value={this.state.stakeIndex}
               onChange={event => this.setState({ stakeIndex: event.target.value })}
             />
-            <label className='ml-20'>Amount: </label>
+            <label className="ml-20">Amount: </label>
             <input
-              type='number'
+              type="number"
               min={0}
               value={this.state.withdrawValue}
               onChange={event => this.setState({ withdrawValue: event.target.value })}
             />
-            <button className='ml-20'>Withdraw</button>
+            <button className="ml-20">Withdraw</button>
           </div>
         </form>
 
@@ -268,8 +259,8 @@ class App extends React.Component {
               onChange={event => this.setState({ stake_index: event.target.value })}
             />
           </Form.Field>
-          <Message error header='Oops!' content={this.state.errorMessage} />
-          <Button color='green'>First Deposit</Button>
+          <Message error header="Oops!" content={this.state.errorMessage} />
+          <Button color="green">First Deposit</Button>
         </Form>
 
         <Form address={this.props.address} onSubmit={this.onSubmitBalanceOf} error={!!this.state.errorMessage}>
@@ -280,12 +271,12 @@ class App extends React.Component {
               onChange={event => this.setState({ account: event.target.value })}
             />
           </Form.Field>
-          <Message error header='Oops!' content={this.state.errorMessage} />
-          <Button color='green'>Get Account</Button>
+          <Message error header="Oops!" content={this.state.errorMessage} />
+          <Button color="green">Get Account</Button>
         </Form> */}
 
-        <div className='flex center'>
-          <table className='mt-20'>
+        <div className="flex center">
+          <table className="mt-20">
             <tr>
               <th>Stake Index</th>
               <th>Available to withdraw</th>
@@ -296,9 +287,9 @@ class App extends React.Component {
               Number(row[0]) === 0 || Number(row[2]) === 0 ? <></> : (
                 <tr key={i}>
                   <td>{i}</td>
-                  <td>{`${row[1] / (10 ** 18)} HPB`}</td>
+                  <td>{`${row[1] / (10 ** 18)} DON`}</td>
                   <td>{new Date(row[2] * 1000).toLocaleString()}</td>
-                  <td>{`${row[3] / (10 ** 19)} HPB`}</td>
+                  <td>{`${row[3] / (10 ** 19)} DON`}</td>
                 </tr>
               )
             ))}
@@ -307,16 +298,18 @@ class App extends React.Component {
         <br />
         <div>
         
-        <p className='mt-20'>you can also use HPDEX to trade HPB</p>
-      
+        <p className='mt-20'>Use HPDex to swap DON tokens</p>
+        <p>Please ensure that you use only the offical DON token address:</p>
+        <p>0xef8432fD5D8b6B33a9915cD6Ad22fe9B6718Db9B</p>
+        
         
           <Iframe
-            title='HPDEX'
-            src='https://app.hpdex.org/#/swap'
-            height='660px'
-            width='100%'
+            title="DON"
+            src="https://app.hpdex.org/#/swap"
+            height="660px"
+            width="100%"
             style={divStyle}
-            id='myId'
+            id="myId"
             />
       </div>
         
@@ -325,15 +318,15 @@ class App extends React.Component {
         
         
         <ReactModal
-           className='ReactModal__Content'
+           className="ReactModal__Content"
            isOpen={this.state.showModal}
            data={
-            { background: 'green' }
+            { background: "green" }
            }
         >
           {this.state.isWin 
-            ? <h2 className='dialog-message win'>Congratulations!</h2>
-            : <h2 className='dialog-message lose'>Bad luck!</h2>
+            ? <h2 className="dialog-message win">Congratulations!</h2>
+            : <h2 className="dialog-message lose">Bad luck!</h2>
           }
           <button onClick={this.handleCloseModal}>Close</button>
         </ReactModal>

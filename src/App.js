@@ -234,7 +234,7 @@ class App extends React.Component {
 
         <br />
 
-	<p>You can withdraw whenever you like, but withdrawals in less than 180 days will incur a penalty forfeit! 
+	<p>You can withdraw whenever you like, but withdrawals in less than 180 days will incur a penalty forfeit!</p>
         <p>less than 30 days = 25% forfeit of total stake</p>
         <p>30-60 days = 20% forfeit of total stake</p>
         <p>60-90 days = 15% forfeit of total stake</p>

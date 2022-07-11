@@ -189,19 +189,23 @@ class App extends React.Component {
 	<h1>HPB Stake</h1>
 	<h3>The worlds first gamified crypto staking platform!</h3>
 	
-        <p>When you stake your HPB, it will generate two values from 0-100. The first is your 'Deposit Percentage' (DP) value, and the second is 
-        your 'Stake Multiplier' (SM) value.</p>
+        <p>When you stake your HPB, it will generate two values from 0-100</p> 
+        <p>The first is your DP (Deposit Percentage) value</p>
+        <p>The second is your SM (Stake Multiplier) value.</p>
 
-        <p>The Deposit Percentage determines what percentage of your stake HPB will accrue interest (0-100%)</p>
+        <p>The DP determines what percentage of your total staked HPB will accrue interest (0-100%)</p>
 												     
-        <p>The Stake Multiplier determines what Annual Percentage Yield (APY) that will be earned on this over a 1 year period (0-100%)</p>
+        <p>The SM determines what Annual Percentage Yield (APY) that will be earned on the DP over a 1 year period (0-100%)</p>
 
-        <p>For example, if you stake 100 HPB, and your DP is 83 and your SM is 22, then you would earn the following over 1 year:</p>
-        <br />
-        <p>83 HPB will earn interest, and of that 83 HPB, it will earn interes of 22% APY, which is 83 x 1.22 = 101.26 HPB</p>
-        <p>Therefore after 1 year, you can with draw 101.26 + 17 HPB = 118.26 HPB</p>
-		
-	<p>You can also have more than one stake!</p>		
+        <p>For example, if you staked 100 HPB, and your DP is 83 and your SM is 22:</p> 
+
+        <p>83% of your HPB (83 HPB) will earn interest</p>
+        <p>That 83 HPB will earn interest of 22% APY, which is 83 x 1.22 = 101.26 HPB</p>
+        <p>Therefore after 1 year, you can withdraw 101.26 + 17 HPB = 118.26 HPB</p>
+	
+<br />
+ 
+	<h3>You can also have more than one stake!</h3>		
 
         <p>Remember, you can purchase HPB from Gate.io or by using Allchainbridge.com</p>
           <br />

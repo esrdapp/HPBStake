@@ -182,7 +182,7 @@ class App extends React.Component {
           The world's first gamified staking DApp! Earn HPB by depositing HPB into the immutable, decentralised HPB Stake smart contract!</p>
           You can obtain HPB from Gate.io CEX or swap to HPB using allchainbridge.com
           <br />
-          <a rel="noreferrer" target="_blank" href="https://allchainbridge.com</a>
+          <a rel='noreferrer' target='_blank' href='https://allchainbridge.com'</a>
 
         <p className='mt-20'>Number of HPB tokens in your connected wallet: {this.state.balance} HPB</p>
         <p>Number of HPB you have staked: {this.state.stakedBalance} HPB</p>

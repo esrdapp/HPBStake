@@ -268,7 +268,7 @@ class App extends React.Component {
               onChange={event => this.setState({ stake_index: event.target.value })}
             />
           </Form.Field>
-          <Message error header="Oops!" content={this.state.errorMessage} />
+          <Message error header='Oops!' content={this.state.errorMessage} />
           <Button color="green">First Deposit</Button>
         </Form>
 

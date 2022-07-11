@@ -169,12 +169,13 @@ class App extends React.Component {
     if (!this.state.account) {
       return (
         <div className="App">
-        <h1>Welcome to HPB Stake. Please connect your Metamask wallet to HPB chain first.</h1>
-		<h3>Network Name: HPB</h3>
-		<h3>New RPC URL: https://hpbnode.com </h3>
-		<h3>Chain ID: 269 </h3>
-		<h3>Currency Symbol: HPB</h3>
-		<h3>Block Explorer: https://hscan.org </h3>
+        <h1>Welcome to HPB Stake</h1>
+	<h3>Please connect your Metamask wallet to HPB chain first</h3>
+		<p>Network Name: HPB</p>
+		<p>New RPC URL: https://hpbnode.com </p>
+		<p>Chain ID: 269 </p>
+		<p>Currency Symbol: HPB</p>
+		<p>Block Explorer: https://hscan.org </p>
 		<br />
         <img src={logo} className="App-logo" alt="logo" />
         </div>

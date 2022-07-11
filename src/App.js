@@ -170,11 +170,11 @@ class App extends React.Component {
       return (
         <div>
         <h1>Welcome to HPB Stake. Please connect your Metamask wallet to HPB chain first.</h1>
-		<h2>Network Name: HPB</h2>
-		<h2>New RPC URL: 'https://hpbnode.com' </h2>
-		<h2>Chain ID: 269 </h2>
-		<h2>Currency Symbol: HPB</h2>
-		<h2>Block Explorer: 'https://hscan.org' </h2>
+		<h3>Network Name: HPB</h3>
+		<h3>New RPC URL: https://hpbnode.com </h3>
+		<h3>Chain ID: 269 </h3>
+		<h3>Currency Symbol: HPB</h3>
+		<h3>Block Explorer: https://hscan.org </h3>
 		<br />
         <img src={logo} className="App-logo" alt="logo" />
         </div>

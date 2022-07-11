@@ -170,14 +170,21 @@ class App extends React.Component {
       return (
         <div className="App">
         <h1>Welcome to HPB Stake</h1>
-	<h3>Please connect your Metamask wallet to HPB chain first</h3>
+	      <img src={logo} className="App-logo" alt="logo" />
+	
+	<h3>The worlds FIRST gamified crypto staking platform</h3>
+	<h3>where a provable True Random Number Generator (TRNG)</h3>
+	<h3>will determine the stake APY that you receive!</h3>
+	
+	
+	<h3>Please connect your Metamask wallet to HPB chain to access the staking menu</h3>
 		<p>Network Name: HPB</p>
 		<p>New RPC URL: https://hpbnode.com </p>
 		<p>Chain ID: 269 </p>
 		<p>Currency Symbol: HPB</p>
 		<p>Block Explorer: https://hscan.org </p>
 		<br />
-        <img src={logo} className="App-logo" alt="logo" />
+        
         </div>
       )
     }

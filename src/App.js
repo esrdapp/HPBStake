@@ -184,7 +184,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} width: 50%;  height: auto; className="App-logo" alt="logo" />
         <p>
           Earn 87.6% interest per year, staking with the DON!</p>
           DON Token Address

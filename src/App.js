@@ -201,7 +201,7 @@ class App extends React.Component {
         <p>83 HPB will earn interest, and of that 83 HPB, it will earn interes of 22% APY, which is 83 x 1.22 = 101.26 HPB</p>
         <p>Therefore after 1 year, you can with draw 101.26 + 17 HPB = 118.26 HPB</p>
 		
-	<p>You can also have more than one stake!<p>		
+	<p>You can also have more than one stake!</p>		
 
         <p>Remember, you can purchase HPB from Gate.io or by using Allchainbridge.com</p>
           <br />

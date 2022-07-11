@@ -191,8 +191,8 @@ class App extends React.Component {
         <p className='mt-20'>HPB Staking</p>
         <p><b>HPB Stake</b> is the first staking platform in the world to introduce an element of gamification and randomness to staking!</p>
         
-        <p>When you stake your HPB, it will generate two values from 0-100. The first is your "Deposit Percentage" (DP) value, and the second is 
-        your "Stake Multiplier" (SM) value.</p>
+        <p>When you stake your HPB, it will generate two values from 0-100. The first is your 'Deposit Percentage' (DP) value, and the second is 
+        your 'Stake Multiplier' (SM) value.</p>
 
         <p>The Deposit Percentage determines what percentage of your stake HPB will accrue interest (0-100%)</p>
         <p>The Stake Multiplier determines what Annual Percentage Yield (APY) will be earned on this over a 1 year period</p>

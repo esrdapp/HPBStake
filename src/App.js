@@ -325,15 +325,15 @@ class App extends React.Component {
         
         
         <ReactModal
-           className="ReactModal__Content"
+           className='ReactModal__Content'
            isOpen={this.state.showModal}
            data={
-            { background: "green" }
+            { background: 'green' }
            }
         >
           {this.state.isWin 
-            ? <h2 className="dialog-message win">Congratulations!</h2>
-            : <h2 className="dialog-message lose">Bad luck!</h2>
+            ? <h2 className='dialog-message win'>Congratulations!</h2>
+            : <h2 className='dialog-message lose'>Bad luck!</h2>
           }
           <button onClick={this.handleCloseModal}>Close</button>
         </ReactModal>

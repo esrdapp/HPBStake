@@ -229,11 +229,18 @@ class App extends React.Component {
         </form>
 
         <br />
-        <p>You can withdraw whenever you like, but withdrawals from each subsequent stake index incur a 1% incremental withdrawl fee. 
-        You can only ever deposit once per stake index, however you can withdraw from each stake index in full or in part</p>
+
+	<p>You can withdraw whenever you like, but withdrawals in less than 180 days will incur a penalty forfeit! 
+        <p>less than 30 days = 25% forfeit of total stake</p>
+        <p>30-60 days = 20% forfeit of total stake</p>
+        <p>60-90 days = 15% forfeit of total stake</p>
+        <p>90-120 days = 10% forfeit of total stake</p>
+        <p>120-150 days = 5% forfeit of total stake</p>
+        <p>150-180 days = 2.5% forfeit of total stake</p>
+        <p>After 180 days = No forfeit, and interest begins to accrue</p>
 
         <form onSubmit={this.handleWithdraw} className='mt-20'>
-          <label>Number of DON Tokens you wish to withdraw (excluding stake interest which will be added automatically): </label><br />
+          <label>Stake ID you wish to withdraw: </label><br />
           <div>
             <label className="ml-20">Stake Index: </label>
             <input
@@ -255,7 +262,7 @@ class App extends React.Component {
 
         {/* <Form address={this.props.address} onSubmit={this.onSubmit2} error={!!this.state.errorMessage}>
           <Form.Field>
-            <label>amount of DON:</label>
+            <label>amount of HPB:</label>
             <Form.Input width={6}
               value={this.state.amount}
               onChange={event => this.setState({ amount: event.target.value })}
@@ -296,9 +303,9 @@ class App extends React.Component {
               Number(row[0]) === 0 || Number(row[2]) === 0 ? <></> : (
                 <tr key={i}>
                   <td>{i}</td>
-                  <td>{`${row[1] / (10 ** 18)} DON`}</td>
+                  <td>{`${row[1] / (10 ** 18)} HPB`}</td>
                   <td>{new Date(row[2] * 1000).toLocaleString()}</td>
-                  <td>{`${row[3] / (10 ** 19)} DON`}</td>
+                  <td>{`${row[3] / (10 ** 19)} HPB`}</td>
                 </tr>
               )
             ))}
@@ -307,13 +314,11 @@ class App extends React.Component {
         <br />
         <div>
         
-        <p className='mt-20'>Use HPDex to swap DON tokens</p>
-        <p>Please ensure that you use only the offical DON token address:</p>
-        <p>0xef8432fD5D8b6B33a9915cD6Ad22fe9B6718Db9B</p>
-        
+        <p className='mt-20'>Use HPDex to trade HPB with other HRC20 tokens</p>
+     
         
           <Iframe
-            title="DON"
+            title="HPB"
             src="https://app.hpdex.org/#/swap"
             height="660px"
             width="100%"

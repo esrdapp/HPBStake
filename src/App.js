@@ -207,14 +207,14 @@ class App extends React.Component {
         <form onSubmit={this.handleStake} className='mt-20'>
           <label>Number of HPB you wish to stake: </label><br />
           <div>
-            <label className="ml-20">Amount: </label>
+            <label className='ml-20'>Amount: </label>
             <input
               type="number"
               min={0}
               value={this.state.stakeValue}
               onChange={event => this.setState({ stakeValue: event.target.value })}
             />
-            <button className="ml-20">Stake</button>
+            <button className='ml-20'>Stake</button>
           </div>
         </form>
 
@@ -235,14 +235,14 @@ class App extends React.Component {
         <form onSubmit={this.handleWithdraw} className='mt-20'>
           <label>Withdraw your Staked HPB </label><br />
           <div>
-            <label className="ml-20">Stake Index: </label>
+            <label className='ml-20'>Stake Index: </label>
             <input
               type="number"
               min={0}
               value={this.state.stakeIndex}
               onChange={event => this.setState({ stakeIndex: event.target.value })}
             />
-            <label className="ml-20">Amount: </label>
+            <label className='ml-20'>Amount: </label>
             <input
               type="number"
               min={0}

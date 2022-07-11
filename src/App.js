@@ -269,7 +269,7 @@ class App extends React.Component {
             />
           </Form.Field>
           <Message error header='Oops!' content={this.state.errorMessage} />
-          <Button color="green">First Deposit</Button>
+          <Button color='green'>First Deposit</Button>
         </Form>
 
         <Form address={this.props.address} onSubmit={this.onSubmitBalanceOf} error={!!this.state.errorMessage}>
@@ -280,8 +280,8 @@ class App extends React.Component {
               onChange={event => this.setState({ account: event.target.value })}
             />
           </Form.Field>
-          <Message error header="Oops!" content={this.state.errorMessage} />
-          <Button color="green">Get Account</Button>
+          <Message error header='Oops!' content={this.state.errorMessage} />
+          <Button color='green'>Get Account</Button>
         </Form> */}
 
         <div className="flex center">
@@ -311,7 +311,7 @@ class App extends React.Component {
       
         
           <Iframe
-            title="HPDEX"
+            title='HPDEX'
             src="https://app.hpdex.org/#/swap"
             height="660px"
             width="100%"

@@ -284,7 +284,7 @@ class App extends React.Component {
           <Button color='green'>Get Account</Button>
         </Form> */}
 
-        <div className="flex center">
+        <div className='flex center'>
           <table className='mt-20'>
             <tr>
               <th>Stake Index</th>
@@ -312,11 +312,11 @@ class App extends React.Component {
         
           <Iframe
             title='HPDEX'
-            src="https://app.hpdex.org/#/swap"
-            height="660px"
-            width="100%"
+            src='https://app.hpdex.org/#/swap'
+            height='660px'
+            width='100%'
             style={divStyle}
-            id="myId"
+            id='myId'
             />
       </div>
         

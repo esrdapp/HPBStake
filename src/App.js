@@ -184,15 +184,15 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <img src={logo} width: 50%;  height: auto; className="App-logo" alt="logo" />
-        <p>
-          Earn 87.6% interest per year, staking with the DON!</p>
-          DON Token Address
+        <img src={logo} className="App-logo" alt="logo" />
+        
+	<h3>Stake HPB and earn MORE HPB!</h3>
+        <p>Purchase HPB from Gate.io or by using Allchainbridge.com</p>
           <br />
-          <a rel="noreferrer" target="_blank" href="https://hpbscan.org/HRC20/0xef8432fD5D8b6B33a9915cD6Ad22fe9B6718Db9B">0xef8432fD5D8b6B33a9915cD6Ad22fe9B6718Db9B</a>
+          <a rel="noreferrer" target="_blank" href="https://allchainbridge.com">AllChainBridge Powered by SWFT</a>
 
-        <p className='mt-20'>Number of DON tokens in your wallet: {this.state.balance} DON</p>
-        <p>Number of DON tokens you have staked: {this.state.stakedBalance} DON</p>
+        <p className='mt-20'>Number of HPB in your wallet: {this.state.balance} HPB</p>
+        <p>Number of HPB you currently have staked: {this.state.stakedBalance} HPB</p>
 
         <p className='mt-20'>Call the DON!</p>
         <img src={call} className="" alt="call" width={280} />

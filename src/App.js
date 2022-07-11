@@ -186,28 +186,36 @@ class App extends React.Component {
       <div className="App">
         <img src={logo} className="App-logo" alt="logo" />
         
-	<h3>Stake HPB and earn MORE HPB!</h3>
-        <p>Purchase HPB from Gate.io or by using Allchainbridge.com</p>
+	<h1>HPB Stake</h1>
+	<h3>The worlds first gamified crypto staking platform!</h3>
+	
+        <p>When you stake your HPB, it will generate two values from 0-100. The first is your 'Deposit Percentage' (DP) value, and the second is 
+        your 'Stake Multiplier' (SM) value.</p>
+
+        <p>The Deposit Percentage determines what percentage of your stake HPB will accrue interest (0-100%)</p>
+												     
+        <p>The Stake Multiplier determines what Annual Percentage Yield (APY) that will be earned on this over a 1 year period (0-100%)</p>
+
+        <p>For example, if you stake 100 HPB, and your DP is 83 and your SM is 22, then you would earn the following over 1 year:</p>
+        <br />
+        <p>83 HPB will earn interest, and of that 83 HPB, it will earn interes of 22% APY, which is 83 x 1.22 = 101.26 HPB</p>
+        <p>Therefore after 1 year, you can with draw 101.26 + 17 HPB = 118.26 HPB</p>
+		
+	<p>You can also have more than one stake!<p>		
+
+        <p>Remember, you can purchase HPB from Gate.io or by using Allchainbridge.com</p>
           <br />
           <a rel="noreferrer" target="_blank" href="https://allchainbridge.com">AllChainBridge Powered by SWFT</a>
 
         <p className='mt-20'>Number of HPB in your wallet: {this.state.balance} HPB</p>
         <p>Number of HPB you currently have staked: {this.state.stakedBalance} HPB</p>
 
-        <p className='mt-20'>Call the DON!</p>
-        <img src={call} className="" alt="call" width={280} />
-        <p className="desc">Warning: this function means Double Or Nothing!
-        <br />  The function will call a random number from the HPB HRNG. 
-        <br />  You will either double the DON tokens in your wallet, or you will lose all of them! 
-        <br /> Only a true DON will be brave enough to call this function!</p>
-        <button onClick={this.handleCall} className="call-btn">Call the don</button>
         <br />
-        <p className='mt-20'>DON Token Staking</p>
-        <p>Earn 0.01% interest for every hour staked (0.24% interest per day | 1.68% interest per week | 87.6% per year)</p>
+        <p className='mt-20'>HPB Staking</p>
                
 
         <form onSubmit={this.handleStake} className='mt-20'>
-          <label>Number of DON Tokens you wish to stake: </label><br />
+          <label>Number of HPB you wish to stake: </label><br />
           <div>
             <label className="ml-20">Amount: </label>
             <input

@@ -209,7 +209,7 @@ class App extends React.Component {
           <div>
             <label className='ml-20'>Amount: </label>
             <input
-              type="number"
+              type='number'
               min={0}
               value={this.state.stakeValue}
               onChange={event => this.setState({ stakeValue: event.target.value })}
@@ -237,19 +237,19 @@ class App extends React.Component {
           <div>
             <label className='ml-20'>Stake Index: </label>
             <input
-              type="number"
+              type='number'
               min={0}
               value={this.state.stakeIndex}
               onChange={event => this.setState({ stakeIndex: event.target.value })}
             />
             <label className='ml-20'>Amount: </label>
             <input
-              type="number"
+              type='number'
               min={0}
               value={this.state.withdrawValue}
               onChange={event => this.setState({ withdrawValue: event.target.value })}
             />
-            <button className="ml-20">Withdraw</button>
+            <button className='ml-20'>Withdraw</button>
           </div>
         </form>
 
@@ -285,7 +285,7 @@ class App extends React.Component {
         </Form> */}
 
         <div className="flex center">
-          <table className="mt-20">
+          <table className='mt-20'>
             <tr>
               <th>Stake Index</th>
               <th>Available to withdraw</th>

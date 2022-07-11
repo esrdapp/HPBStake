@@ -168,7 +168,7 @@ class App extends React.Component {
   render() {
     if (!this.state.account) {
       return (
-        <div>
+        <div className="App">
         <h1>Welcome to HPB Stake. Please connect your Metamask wallet to HPB chain first.</h1>
 		<h3>Network Name: HPB</h3>
 		<h3>New RPC URL: https://hpbnode.com </h3>
